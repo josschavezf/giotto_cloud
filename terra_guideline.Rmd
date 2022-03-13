@@ -13,6 +13,8 @@ Go to <https://app.terra.bio/> on Chrome browser and Sign up using your email.
 - Set Terra as a billing user on your account.
 - Select your Google account to create your billing project on Terra.
 
+For additional information about billing account go to the [Link](https://support.terra.bio/hc/en-us/articles/360048632271-Understanding-Terra-costs-and-billing).
+
 ## Create a workspace
 
 - Create a workspace within your billing account. Note that all users with access permissions to your workspace will be sharing the same billing account.
@@ -50,31 +52,52 @@ knitr::include_graphics("img/02_docker.png")
 
 You can download the Startup Script from this [link](https://github.com/josschavezf/giotto_cloud/blob/main/startup_script.sh)
 
-- Upload the Startup Script to your Terra Cloud documents.
+- Upload the Startup Script to your Workspace Files.
 
+```{r,echo=FALSE}
+knitr::include_graphics("img/03_upload.png")
+```
 
+- Click on the startup_script.sh document and select "View this file in the Google Cloud Storage Browser " this option will re-direct you to your Google Cloud documents page
 
-- Click on the startup_script.sh document and select "See ... " this option will re-direct you to your Google cloud documents page
-
-
+```{r,echo=FALSE}
+knitr::include_graphics("img/03_view.png")
+```
 
 - Click on the startup_script.sh document to display the file details. Copy the link
 
+```{r,echo=FALSE}
+knitr::include_graphics("img/03_googlecloud.png")
+knitr::include_graphics("img/03_url.png")
+```
 
 - Use this link to launch the Cloud environment under the Startup Script option
 
-
+```{r,echo=FALSE}
+knitr::include_graphics("img/03_cloud.png")
+```
 
 - Click on Create Environment
 
 
-
-
 ## Share your workspace with collaborators
 
+You can share your workspace with collaborators, including data, notebooks, and workflows stored in your workspace.
+
+- Go to the Dashboard tab on your workspace and click the three dots on the upper right corner.
+- Select Share option.
+- Add the email of your collaborator. They will receive an invitation for joining the worskpace.
+- You can select which permissions are granted to your collaborator (reader, writer or owner).
+- Click the save button.
 
 ```{r,echo=FALSE}
 knitr::include_graphics("img/04_share.png")
 ```
+
+Some considerations when sharing with collaborators in Terra:
+
+- Keep in mind that all Cloud environments (virtual machines) launched within the same workspace are linked to the same billing account.
+- Simultaneous modification of notebooks are not allowed.
+- Opening the notebook while someone else is editing will show a message, but the current editor is not notified when someone else is trying to open the notebook.
 
 
